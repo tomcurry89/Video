@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Video Player</title> <!-- title shown on browser tab -->
+		<header>Tom Curry, 12097372</header>
+	</head>
+	
+	<body>
+		<script src="scripts/videoScript.js"></script>
+		<section id="videoContainer">
+			<video id = "video"
+				width=640 height=480
+				poster="images/poster.jpg"> <!-- this creates the thumbnail for the video -->
+				<source src="video/h264/blur.mp4"> <!-- my mp4 video for h264 -->
+				<source src="video/webm/blur.webm"> <!-- my webm video -->
+			</video>
+		
+			<div id="videoControls">	
+				<button type="button" id="playPause" >Play</button>
+				<button type="button" id="mute" >Mute</button>
+				<button type="button" id="fullScreen" >Fullscreen</button>
+				<button type="button" id="rewindVid" >Rewind</button>
+				<button type="button" id="forwardVid" >Fastforward</button>
+				<p>
+				<select id="speedVideo">
+					<option value="0.50">0.50</option>
+					<option value="0.75">0.75</option>
+					<option selected value="1.00">1.00</option>
+					<option value="1.25">1.25</option>
+					<option value="1.50">1.50</option>
+					<option value="1.75">1.75</option>
+					<option value="2.00">2.00</option>
+				</select>
+				<input type="text" readonly id="durationField" size="4" />
+				<input type="text" readonly id="realtimeDuration" size="4" />
+				Time Slider
+				<input type="range" id="seekBar" min="1" max="100" step="1" value="0">
+				Volume
+				<input type="range" id="volumeSlider" min="1" max="100" step="1" value="100">
+				
+			</div>
+	
+		</section>
+	</body>
+</html> 
+ 
